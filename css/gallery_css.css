@@ -1,7 +1,7 @@
 /*工具箱*/
 @font-face {
   font-family: teacup; /* required */
-  src:url('https://od.lk/s/MzdfNjI2NDk4Xw/teafront.otf');						/* required */
+  src:url('source/teafront.otf');						/* required */
 }
 
 a {
