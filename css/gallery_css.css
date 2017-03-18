@@ -1,0 +1,607 @@
+/*工具箱*/
+@font-face {
+  font-family: teacup; /* required */
+  src:url('https://od.lk/s/MzdfNjI2NDk4Xw/teafront.otf');						/* required */
+}
+
+a {
+    text-decoration:none;
+    color:#fff;
+}
+
+ul {
+  list-style-type: none; 
+  }
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_3.gif) center no-repeat #fff;
+}
+
+
+/*版面設定*/
+.wrapper{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100vh;
+  width:100vw;
+  overflow:hidden;
+  background-color:#C6C3B3;
+}
+
+/*菜單*/
+.menu{
+  position:absolute;
+}
+#menu_straight{
+  position:absolute;
+  z-index:40;
+}
+
+#menu_left{
+  position:absolute;
+  z-index:30;
+  left:-215px;
+  opacity:0.5;
+}
+
+#menu_left li{
+  display:block;
+  line-height:25px;
+  background:#000;
+  width:155px;
+  height:120px;
+  padding-top:6px;
+  padding-left:6px;
+  margin-top:-20px;
+}
+
+#straight{
+  width:50px;
+  height:100vh;
+  background-color:#C6C3B3;
+}
+
+#straight_a{
+  height:350px;
+  width:2px;
+  left:22px;
+  top:450px;
+  background-color:#fff;
+}
+
+#overlay{
+  position:absolute;
+  z-index:20;
+  width:100vw;
+  height:100vh;
+  background-color:#000;
+  opacity:0.3;
+  display:none;
+}
+
+/*文字設定*/
+.text{
+  font-family:'teacup';
+  position:absolute;
+  color:#fff;
+  z-index:10;
+}
+
+.picture.ptext{
+  z-index:3;
+  font-family:'teacup';
+  font-size:25px;
+  position:absolute;
+  color:#fff;
+}
+
+.se{
+  font-family:'teacup';
+  color:#fff;
+}
+
+#text1{
+  font-size:5px;
+  left:10px;
+  top:430px;
+}
+
+#text2{
+  display:none;
+  font-size:5px;
+  left:11px;
+  top:785px;
+}
+
+
+/*漢堡包和icon的設定*/
+#icon{
+  z-index:40;
+  position:fixed;
+  top:398px;
+  left:10px;
+  color:#fff;
+  font-size:35px;
+  transition:0.5s ease;
+}
+
+#icon:hover{
+  opacity:0.5;
+  transform:scale(1.1,1.1);
+}
+
+.fa{
+position:fixed;
+left:10px;
+color:#fff;
+}
+
+#icona{
+  top:5px;
+  left:1300px;
+}
+
+#iconb{
+  top:5px;
+  left:1350px;
+}
+#iconc{
+  top:5px;
+  left:1395px;
+}
+
+
+
+/*裝飾方塊*/
+.deco-square{
+  display:none;
+  position:absolute;
+  width:74vw;
+  height:100vh;
+  right:0;
+}
+
+.square{
+  position:absolute;
+  height:10px;
+  width:10px;
+  background-color:#fff;
+  transform:rotate(45deg);
+}
+#squ1{
+  top:73px;
+}
+#squ2{
+  top:293px;
+}
+#squ3{
+  top:513px;
+}
+#squ4{
+  top:733px;
+}
+#squ5{
+  top:20px;
+  left:382px;
+}
+#squ6{
+  top:20px;
+  left:712px;
+}
+
+
+
+
+/*裝飾邊欄*/
+#gallery-deco{
+  position:absolute;
+  width:100vw;
+  height:100vh;
+}
+.w-lines{
+  position:absolute;
+  z-index:6;
+  right:30px;
+  top:78px;
+  width:70vw;
+  height:1px;
+  background-color:#fff;
+}
+
+.h-lines{
+  position:absolute;
+  z-index:6;
+  left:760px;
+  bottom:0;
+  width:2px;
+  height:95vh;
+  background-color:#fff;
+}
+
+#line2{
+  top:298px;
+}
+
+#line3{
+  top:518px;
+}
+
+#line4{
+  top:737px;
+}
+
+#line5{
+  position:absolute;
+  z-index:6;
+  left:430px;
+  bottom:0;
+  width:2px;
+  height:100vh;
+  background-color:#fff;
+}
+#line7{
+  left:1091px;
+}
+
+
+/*圖片gallery設定*/
+#gallery{
+  position:absolute;
+  right:0px;
+  bottom:0px;
+  height:90vh;
+  width:70vw;
+  overflow: hidden;
+}
+.picture{
+  cursor: url("http://tholman.com/intense-images/img/plus_cursor.png") 25 25, auto;
+  position:absolute;
+  height:219px;
+  width:329px;
+}
+.picture.pmain{
+  z-index:5;
+  opacity:0;
+  background-size: cover;
+  background-position: 50% 50%;
+  transition:1s ease;
+}
+
+.picture.pmain:hover{
+  opacity:1;
+  animation: 1s blur forwards;
+}
+
+.p-overlay{
+  background-color:#767676;
+  opacity:0.5;
+  z-index:2;
+}
+
+
+.picture-scroll{
+  width:70vw;
+  height:1385px;
+}
+
+
+/*各圖片雜項*/
+
+
+#p1-js{
+  background-image: url("https://dl.getdropbox.com/s/q9a113dcfrjh8du/picture1.png");
+}
+
+#p1-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/q9a113dcfrjh8du/picture1.png");
+  filter: blur(3px)
+}
+#p2{
+  left:331px;
+}
+#p2-js{
+  background-image: url("https://dl.getdropbox.com/s/ccw04unc952s5as/picutre4.png");
+}
+
+#p2-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/ccw04unc952s5as/picutre4.png");
+  filter: blur(3px)
+}
+
+#p3{
+  left:662px;
+}
+
+#p3-js{
+  background-image: url("https://dl.getdropbox.com/s/1yb9c96vz7pzlpr/picture3.png");
+}
+
+#p3-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/1yb9c96vz7pzlpr/picture3.png");
+  filter: blur(3px)
+}
+
+#p4{
+  top:221px;
+}
+#p4-js{
+  background-image: url("https://dl.getdropbox.com/s/4h12rpuq0tokknd/picture2.png");
+}
+
+#p4-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/4h12rpuq0tokknd/picture2.png");
+  filter: blur(3px)
+}
+
+#p5{
+  top:221px;
+  left:331px;
+}
+#p5-js{
+  background-image: url("https://dl.getdropbox.com/s/73vjlp64v1i2dil/picture5.png");
+}
+
+#p5-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/73vjlp64v1i2dil/picture5.png");
+  filter: blur(3px)
+}
+
+#p6{
+  left:662px;
+  top:221px;
+}
+
+#p6-js{
+  background-image: url("https://dl.getdropbox.com/s/q7703d9zxzqpenp/picture6.png");
+}
+
+#p6-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/q7703d9zxzqpenp/picture6.png");
+  filter: blur(3px)
+}
+
+#p7{
+  top:442px;
+}
+
+#p7-js{
+  background-image: url("https://dl.getdropbox.com/s/hqnm4ujpv58797z/picture7.png");
+}
+
+#p7-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/hqnm4ujpv58797z/picture7.png");
+  filter: blur(3px)
+}
+#p8{
+  left:331px;
+  top:442px;
+}
+#p8-js{
+  background-image: url("https://dl.getdropbox.com/s/5mqvzp0ihlkjclk/picture8.png");
+}
+
+#p8-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/5mqvzp0ihlkjclk/picture8.png");
+  filter: blur(3px)
+}
+
+#p9{
+    left:662px;
+    top:442px;
+}
+
+#p9-js{
+  background-image: url("https://dl.getdropbox.com/s/6etazkpg69sxw3b/picture9.png");
+}
+
+#p9-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/6etazkpg69sxw3b/picture9.png");
+  filter: blur(3px)
+}
+
+#p10{
+    top:663px;
+}
+      
+      
+
+#p10-js{
+  background-image: url("https://dl.getdropbox.com/s/fe6t0amc07jvki5/picture10.png");
+}
+
+#p10-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/fe6t0amc07jvki5/picture10.png");
+  filter: blur(3px)
+}
+#p11{
+    top:663px;
+    left:331px;
+}
+      
+      
+
+#p11-js{
+  background-image: url("https://dl.getdropbox.com/s/2zr29edcn6bw4cm/picutre11.png");
+}
+
+#p11-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/2zr29edcn6bw4cm/picutre11.png");
+  filter: blur(3px)
+}
+
+#p12{
+    top:663px;
+    left:662px;
+}
+      
+#p12-js{
+  background-image: url("https://dl.getdropbox.com/s/4pn1n06jaahc24p/picture12.png");
+}
+
+#p12-under{
+  z-index:1;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://dl.getdropbox.com/s/4pn1n06jaahc24p/picture12.png");
+  filter: blur(3px)
+}
+
+/*動畫字設定*/
+.text-animate{
+  font-family:'teacup';
+  color:#fff;
+
+}
+
+.vertical{
+  position:absolute;
+  writing-mode: vertical-lr;
+  margin-top:50px;
+  margin-left:100px;
+}
+.horizon{
+  position:absolute;
+  text-align:justify;
+  margin-top:50px;
+  margin-left:70px;
+}
+
+.text-line{
+  position:absolute;
+  top:48px;
+  left:38px;
+  background-color:#fff;
+  width:2px;
+  height:28px;
+}
+
+
+.vertical.big{
+  display:none;
+  opacity:0;
+  font-size:80px;
+  left:-150px;
+}
+
+.vertical.small{
+  display:none;
+  opacity:0;
+  top:160px;
+  left:-25px;
+	line-height:35px;
+	font-size:15px;
+	letter-spacing:5px;
+}
+
+.horizon.number{
+  display:none;
+  opacity:0;
+  top:120px;
+  left:120px;
+  font-size:20px;
+}
+
+
+.horizon.describe{
+  display:none;
+  opacity:0;
+  top:350px;
+  left:-180px;
+  width:250px; 
+  font-size:5px;
+  line-height:18px;
+  text-indent:25px;
+}
+
+
+
+
+/*動畫工具箱*/
+@keyframes blur{
+  from{-webkit-filter: blur(3px) }
+  to{-webkit-filter: blur(0px) }
+}
+/* Bounce To Right */
+.hvr-bounce-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
+  color: white;
+}
+.hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
