@@ -1,7 +1,7 @@
 /*工具箱*/
 @font-face {
-  font-family: teacup; /* required */
-  src:url('source/teafront.otf');						/* required */
+  font-family: tea; /* required */
+  src:url('https://pantisock.github.io/nian-si-tie/source/teafront.otf');						/* required */
 }
 
 a {
@@ -90,7 +90,7 @@ ul {
 
 /*文字設定*/
 .text{
-  font-family:'teacup';
+  font-family:'tea';
   position:absolute;
   color:#fff;
   z-index:10;
@@ -98,14 +98,14 @@ ul {
 
 .picture.ptext{
   z-index:3;
-  font-family:'teacup';
+  font-family:'tea';
   font-size:25px;
   position:absolute;
   color:#fff;
 }
 
 .se{
-  font-family:'teacup';
+  font-family:'tea';
   color:#fff;
 }
 
