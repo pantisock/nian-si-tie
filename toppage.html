@@ -1,0 +1,128 @@
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="source/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/toppage.css" />
+    </head>
+
+    <body>
+    
+<div class="wrapper">
+<audio src="https://dl.getdropbox.com/s/46mnn1c16jv4gn1/PerituneMaterial_Verdure.mp3" preload></audio>
+<div class="player">
+<div class="container">
+	<button data-am-button="small" id="btn-mute"><i class="fa fa-volume-off"></i></button>
+	<button data-am-button="large" id="btn-play-pause"><i class="fa fa-play"></i></button>
+	<button data-am-button="small" id="btn-stop"><i class="fa fa-stop"></i></button>	
+	<div id="progress-bar"><span id="progress"></span></div>	
+</div>	
+		</div>
+  
+  
+  
+    <div id="contactus">
+    <i class="fa fa-facebook-square" id="icona"></i>
+    <i class="fa fa-vimeo-square" id="iconb"></i>
+    <i class="fa fa-google-plus-square" id="iconc"></i>
+    </div>
+  
+  <div class="choosent">
+    <div class="choosetext hvr-shrink" id="text1">
+      <p>關於廿四帖</p>
+      </div>
+    <div class="choosetext hvr-shrink" id="text2">
+      <a href="http://s.codepen.io/pantisock/debug/ZezbMR/jVApogzdqEGr"><p>作品</p></a>
+      </div>
+    <div class="choosetext hvr-shrink" id="text3">
+      <p>聯繫</p>
+      </div>
+    </div>
+ <div class="choosen">
+   <div class="botton" id="choose1">
+     </div>
+   <div class="botton" id="choose2">
+     </div>
+   <div class="botton" id="choose3">
+     </div>
+   </div>
+
+
+<div class="logo">
+  </div>
+<div class="decolines" id="line1">
+  </div>
+<div class="decolines" id="line2">
+  </div>
+<div class="overlay">
+  </div>
+
+<video autoplay loop id="video-background"  muted>
+  <source src="https://dl.getdropbox.com/s/qzjzppwss2m57mp/wedvideo_CLIPCHAMP_720p.mp4" type="video/mp4">
+</video>
+  
+  </div>
+        <script src="js/jquery.min.js"></script>
+        <script>$(function() {
+
+	var audio = $("audio")[0];
+
+	$('#btn-play-pause').on('click', function() {
+		//Play/pause the track
+		if (audio.paused == false) {
+			audio.pause();
+			$(this).children('i').removeClass('fa-pause');
+			$(this).children('i').addClass('fa-play');
+		} else {
+			audio.play();
+			$(this).children('i').removeClass('fa-play');
+			$(this).children('i').addClass('fa-pause');
+		}
+	});
+
+	$('#btn-stop').on('click', function() {
+		//Stop the track
+		audio.pause();
+		audio.currentTime = 0;
+		$('#btn-play-pause').children('i').removeClass('fa-pause');
+		$('#btn-play-pause').children('i').addClass('fa-play');
+	});
+	
+	$('#btn-mute').on('click', function() {
+		//Mutes/unmutes the sound
+		if(audio.volume != 0) {
+			audio.volume = 0;
+			$(this).children('i').removeClass('fa-volume-off');
+			$(this).children('i').addClass('fa-volume-up');
+		} else {
+			audio.volume = 1;
+			$(this).children('i').removeClass('fa-volume-up');
+			$(this).children('i').addClass('fa-volume-off');
+		}
+	});
+
+	function updateProgress() {
+		//Updates the progress bar
+		var progress = document.getElementById("progress");
+		var value = 0;
+		if (audio.currentTime > 0) {
+			value = Math.floor((100 / audio.duration) * audio.currentTime);
+		}
+		progress.style.width = value + "%";
+	}
+
+	//Progress Bar event listener
+	audio.addEventListener("timeupdate", updateProgress, false);
+	
+});
+
+
+
+$(document).ready(function() {
+  $('.logo').fadeIn(4000);
+  $('#line1').animate({left:'0px'},1000);
+  $('#line2').animate({right:'-10px'},1000);
+  
+});
+</script>
+    </body>
+
+</html>

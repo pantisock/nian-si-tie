@@ -1,7 +1,7 @@
 /*工具箱*/
 @font-face {
   font-family: tea; /* required */
-  src:url('https://pantisock.github.io/nian-si-tie/source/teafront.otf');						/* required */
+  src:url('element/teafront.otf');						/* required */
 }
 
 a {
