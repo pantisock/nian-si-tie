@@ -161,46 +161,6 @@ color:#fff;
 
 
 
-/*裝飾方塊*/
-.deco-square{
-  display:none;
-  position:absolute;
-  width:74vw;
-  height:100vh;
-  right:0;
-}
-
-.square{
-  position:absolute;
-  height:10px;
-  width:10px;
-  background-color:#fff;
-  transform:rotate(45deg);
-}
-#squ1{
-  top:73px;
-}
-#squ2{
-  top:293px;
-}
-#squ3{
-  top:513px;
-}
-#squ4{
-  top:733px;
-}
-#squ5{
-  top:20px;
-  left:382px;
-}
-#squ6{
-  top:20px;
-  left:712px;
-}
-
-
-
-
 /*裝飾邊欄*/
 #gallery-deco{
   position:absolute;
