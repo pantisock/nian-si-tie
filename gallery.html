@@ -482,8 +482,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
     <script src="js/gallery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconate/0.2.7/iconate.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/jquery.Framer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconate/0.2.7/iconate.min.js"></script>
+        <script>
+        $('#gallery').mCustomScrollbar({
+  theme:"inset-3",
+  scrollButtons:{enable:true,scrollType:"stepped"},
+keyboard:{scrollType:"stepped"},
+mouseWheel:{scrollAmount:188,normalizeDelta:true},
+ autoExpandScrollbar:true,
+snapAmount:240,
+snapOffset:20
+});
+//scrollbar
+        $('.framer').Framer({
+		opacity: 0.8,
+		overlayTime: 500,
+		isOverlayClose: true,
+		isAutoResize: true,
+		isScroll: true,
+		resizeRatio: 0.9,
+		speed: 500,
+		title: '<div id="edTitle"></div>',
+		description: '<div id="edDescription"></div>',
+		closeBtn: '<div class="close_btn"></div>',
+		inner: $('<div id="Framer_inner"></div>'),
+		width: 1280,
+		height: 720,
+		iframe: '<iframe name="framer-iframe" frameborder="0"></iframe>',
+		ajaxDataType: 'html',
+	});
+//framer
+        </script>
     </body>
         </html>

@@ -371,36 +371,6 @@ if(htoggle==true){
 });
 //toggle
 
-$('#gallery').mCustomScrollbar({
-  theme:"inset-3",
-  scrollButtons:{enable:true,scrollType:"stepped"},
-keyboard:{scrollType:"stepped"},
-mouseWheel:{scrollAmount:188,normalizeDelta:true},
- autoExpandScrollbar:true,
-snapAmount:240,
-snapOffset:20
-});
-//scrollbar
-
-$('.framer').Framer({
-		opacity: 0.8,
-		overlayTime: 500,
-		isOverlayClose: true,
-		isAutoResize: true,
-		isScroll: true,
-		resizeRatio: 0.9,
-		speed: 500,
-		title: '<div id="edTitle"></div>',
-		description: '<div id="edDescription"></div>',
-		closeBtn: '<div class="close_btn"></div>',
-		inner: $('<div id="Framer_inner"></div>'),
-		width: 1280,
-		height: 720,
-		iframe: '<iframe name="framer-iframe" frameborder="0"></iframe>',
-		ajaxDataType: 'html',
-	});
-//framer
-
  window.onload = function() {
     var elements = document.querySelectorAll( '.picture' );
     Intense( elements );
