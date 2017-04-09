@@ -50,7 +50,10 @@ ul {
   position:absolute;
   z-index:30;
   left:-215px;
-  opacity:0.5;
+}
+
+#menu_left li:hover{
+    opacity: 1;
 }
 
 #menu_left li{
@@ -62,6 +65,8 @@ ul {
   padding-top:6px;
   padding-left:6px;
   margin-top:-20px;
+  opacity:0.3;
+  transition:0.5s ease;
 }
 
 #straight{

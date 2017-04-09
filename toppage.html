@@ -1,128 +1,183 @@
 <html>
     <head>
-    <link rel="stylesheet" type="text/css" href="source/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/toppage.css" />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="css/toppage.css" />
+        <link rel="stylesheet" type="text/css" href="source/jquery.mb.miniAudioPlayer-master/dist/css/jQuery.mb.miniAudioPlayer.min.css" />
+        <link rel="stylesheet" type="text/css" href="source/font-awesome-4.7.0/css/font-awesome.min.css" />
     </head>
-
-    <body>
     
-<div class="wrapper">
-<audio src="https://dl.getdropbox.com/s/46mnn1c16jv4gn1/PerituneMaterial_Verdure.mp3" preload></audio>
-<div class="player">
-<div class="container">
-	<button data-am-button="small" id="btn-mute"><i class="fa fa-volume-off"></i></button>
-	<button data-am-button="large" id="btn-play-pause"><i class="fa fa-play"></i></button>
-	<button data-am-button="small" id="btn-stop"><i class="fa fa-stop"></i></button>	
-	<div id="progress-bar"><span id="progress"></span></div>	
-</div>	
-		</div>
-  
-  
-  
-    <div id="contactus">
-    <i class="fa fa-facebook-square" id="icona"></i>
-    <i class="fa fa-vimeo-square" id="iconb"></i>
-    <i class="fa fa-google-plus-square" id="iconc"></i>
-    </div>
-  
-  <div class="choosent">
-    <div class="choosetext hvr-shrink" id="text1">
-      <p>關於廿四帖</p>
-      </div>
-    <div class="choosetext hvr-shrink" id="text2">
-      <a href="http://s.codepen.io/pantisock/debug/ZezbMR/jVApogzdqEGr"><p>作品</p></a>
-      </div>
-    <div class="choosetext hvr-shrink" id="text3">
-      <p>聯繫</p>
-      </div>
-    </div>
- <div class="choosen">
-   <div class="botton" id="choose1">
-     </div>
-   <div class="botton" id="choose2">
-     </div>
-   <div class="botton" id="choose3">
-     </div>
+    <body>
+        
+        
+<!----上層區塊〠_〠---->
+<div class="header">
+<i class="fa fa-facebook-square" id="icona"></i>
+<i class="fa fa-vimeo-square" id="iconb"></i>
+<i class="fa fa-google-plus-square" id="iconc"></i>           
+        </div>  
+<!----迷你播放器〠_〠---->
+<div class="musicplayer">
+<a id="m1" class="audio" href="css/element/audio/tokinonaiyou_hagall.mp3">tokinonaiyou_hagall</a>
+        </div>   
+<!----主頁按鈕＆動畫&網點〠_〠---->
+<div class="main_page">
+    <div class="main_button">
+   <div class="m_bts hvr-shrink" id="mbts1">關於廿四帖</div>
+        <div class="m_bts hvr-shrink" id="mbts2"><a href="gallery.html">作品</a></div>
+   <div class="m_bts hvr-shrink" id="mbts3">聯繫</div>
    </div>
-
-
-<div class="logo">
-  </div>
-<div class="decolines" id="line1">
-  </div>
-<div class="decolines" id="line2">
-  </div>
-<div class="overlay">
-  </div>
-
-<video autoplay loop id="video-background"  muted>
-  <source src="https://dl.getdropbox.com/s/qzjzppwss2m57mp/wedvideo_CLIPCHAMP_720p.mp4" type="video/mp4">
+    <div class="main_animate">
+    <div class="logo"></div>
+    <div class="lines" id="line1"></div>
+    <div class="lines" id="line2"></div>
+    </div>  
+        </div>  
+<div class="overlay"></div>
+<!----視差活動層＆切換按鈕〠_〠---->
+<div class="parallax">
+<div id="style1">
+ <div class="main">
+      <ul id="scene">
+        <li class="layer" data-depth="0">
+          <div class="layer1">
+            </div>
+        </li>
+        <li class="layer" data-depth="0.2">
+          <div class="layer2"></div>
+        </li>
+        <li class="layer" data-depth="0.3">
+          <div class="layer3"></div>
+        </li>
+        <li class="layer" data-depth="0.3">
+          <div class="layer4"></div>
+        </li>     
+        <li class="layer" data-depth="0.5">
+          <div class="layer5"></div>
+        </li>
+        <li class="layer" data-depth="0.7">
+          <div class="layer6"></div>
+        </li>
+        <li class="layer" data-depth="0.7">
+          <div class="layer7"></div>
+        </li>
+        <li class="layer" data-depth="0.9">
+          <div class="layer8"></div>
+        </li>
+        <li class="layer" data-depth="0.9">
+          <div class="layer9"></div>
+        </li>
+      </ul>
+</div>
+ <div class="main_video">
+       <video autoplay loop id="video-background"  muted>
+  <source src="css/element/video/toppage.mp4" type="video/mp4">
 </video>
-  
-  </div>
-        <script src="js/jquery.min.js"></script>
-        <script>$(function() {
+        </div>
+        </div>
+<div id="style2">
+ <div class="main">
+      <ul id="scene2">
+        <li class="layer" data-depth="0.1">
+        <div class="layerB1">
+            </div>
+        </li>
+        <li class="layer" data-depth="0.2">
+          <div class="layerB2"></div>
+        </li>
+        <li class="layer" data-depth="0.3">
+          <div class="layerB3"></div>
+        </li>
+        <li class="layer" data-depth="0.5">
+          <div class="layerB4"></div>
+        </li>     
+        <li class="layer" data-depth="0.7">
+          <div class="layerB5"></div>
+        </li>
+      </ul>
+</div>
+        </div>      
+<div id="style3">
+ <div class="main">
+      <ul id="scene3">
+        <li class="layer" data-depth="0.1">
+          <div class="layerC1">
+            </div>
+        </li>
+        <li class="layer" data-depth="0.2">
+          <div class="layerC2"></div>
+        </li>
+        <li class="layer" data-depth="0.4">
+          <div class="layerC3"></div>
+        </li>
+        <li class="layer" data-depth="0.6">
+          <div class="layerC4"></div>
+        </li>     
+        <li class="layer" data-depth="0.8">
+          <div class="layerC5"></div>
+        </li>
+        <li class="layer" data-depth="0.3">
+          <div class="layerC6"></div>
+        </li>
+        <li class="layer" data-depth="0.5">
+          <div class="layerC7"></div>
+        </li>
+      </ul>
+</div>
+ <div class="main_video">
+       <video autoplay loop id="video-background"  muted>
+  <source src="css/element/video/toppage.mp4" type="video/mp4">
+</video>
+        </div>
+        </div> 
+ <div class="buttons">
+        <ul id="button">
+            <li class="bts" id="bts1">01</li>
+            <li class="bts" id="bts2">02</li>
+            <li class="bts" id="bts3">03</li>
+            </ul>
+        </div>    
+        </div>
 
-	var audio = $("audio")[0];
-
-	$('#btn-play-pause').on('click', function() {
-		//Play/pause the track
-		if (audio.paused == false) {
-			audio.pause();
-			$(this).children('i').removeClass('fa-pause');
-			$(this).children('i').addClass('fa-play');
-		} else {
-			audio.play();
-			$(this).children('i').removeClass('fa-play');
-			$(this).children('i').addClass('fa-pause');
-		}
-	});
-
-	$('#btn-stop').on('click', function() {
-		//Stop the track
-		audio.pause();
-		audio.currentTime = 0;
-		$('#btn-play-pause').children('i').removeClass('fa-pause');
-		$('#btn-play-pause').children('i').addClass('fa-play');
-	});
-	
-	$('#btn-mute').on('click', function() {
-		//Mutes/unmutes the sound
-		if(audio.volume != 0) {
-			audio.volume = 0;
-			$(this).children('i').removeClass('fa-volume-off');
-			$(this).children('i').addClass('fa-volume-up');
-		} else {
-			audio.volume = 1;
-			$(this).children('i').removeClass('fa-volume-up');
-			$(this).children('i').addClass('fa-volume-off');
-		}
-	});
-
-	function updateProgress() {
-		//Updates the progress bar
-		var progress = document.getElementById("progress");
-		var value = 0;
-		if (audio.currentTime > 0) {
-			value = Math.floor((100 / audio.duration) * audio.currentTime);
-		}
-		progress.style.width = value + "%";
-	}
-
-	//Progress Bar event listener
-	audio.addEventListener("timeupdate", updateProgress, false);
-	
+        
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script src="source/jquery.mb.miniAudioPlayer-master/dist/jquery.mb.miniAudioPlayer.min.js"></script>
+    <script>
+         $(document).ready(function() {
+  $('#line1').delay(2000).animate({width:'47vw'},2000);
+  $('.logo').delay(3500).fadeIn(2000);
+  $('#line2').delay(4000).animate({width:'47vw'},1000); 
+  $('.main_button').delay(3000).fadeIn(2000);  
+         });
+        </script>
+    <script>
+$('#scene').parallax();
+$('#scene2').parallax();
+$('#scene3').parallax();
+        </script>
+        <script>
+        $('#bts1').click(function(){
+            $('#style2,#style3').fadeOut();
+            $('#style1').delay(500).fadeIn(3000);            
+        });
+        $('#bts2').click(function(){
+            $('#style1,#style3').fadeOut();
+            $('#style2').delay(500).fadeIn(3000);            
+        });
+        $('#bts3').click(function(){
+            $('#style1,#style2').fadeOut();
+            $('#style3').delay(500).fadeIn(3000);            
+        });
+        </script>
+        <script>
+        $(".audio").mb_miniPlayer({
+  width:300,
+  autoplay:true,  
+  loop:true,
+  skin:'mySkin',
 });
-
-
-
-$(document).ready(function() {
-  $('.logo').fadeIn(4000);
-  $('#line1').animate({left:'0px'},1000);
-  $('#line2').animate({right:'-10px'},1000);
-  
-});
-</script>
+        </script>
+    
+    
     </body>
-
 </html>
