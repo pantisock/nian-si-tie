@@ -10,6 +10,18 @@
     </head>
     
     <body>
+
+<!----preloader---->        
+        <div class="preloader">
+<div class='tetrominos'>
+  <div class='tetromino box1'></div>
+  <div class='tetromino box2'></div>
+  <div class='tetromino box3'></div>
+  <div class='tetromino box4'></div>
+</div>
+<div class="loader"><span class="loader_letter">L</span><span class="loader_letter">o</span><span class="loader_letter">a</span><span class="loader_letter">d</span><span class="loader_letter">i</span><span class="loader_letter">n</span><span class="loader_letter">g</span></div>
+<div class="background"></div>
+    </div>
         
 <!----上層區塊---->
 <div class="header">
@@ -473,6 +485,11 @@
     <script src="js/jquery.Framer.min.js"></script>
     <script src="js/iconate.min.js"></script>
     <script src="js/playsound.js"></script>
+        <script>
+        	$(window).load(function() {
+		$(".preloader").fadeOut("slow");;
+	});   
+        </script>
         <script>
         $('#gallery').mCustomScrollbar({
   theme:"inset-3",

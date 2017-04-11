@@ -8,7 +8,19 @@
     </head>
     
     <body>
+
         
+<!----preloader---->        
+        <div class="preloader">
+<div class='tetrominos'>
+  <div class='tetromino box1'></div>
+  <div class='tetromino box2'></div>
+  <div class='tetromino box3'></div>
+  <div class='tetromino box4'></div>
+</div>
+<div class="loader"><span class="loader_letter">L</span><span class="loader_letter">o</span><span class="loader_letter">a</span><span class="loader_letter">d</span><span class="loader_letter">i</span><span class="loader_letter">n</span><span class="loader_letter">g</span></div>
+<div class="background"></div>
+    </div>
         
 <!----上層區塊〠_〠---->
 <div class="header">
@@ -143,6 +155,11 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery.parallax.js"></script>
     <script src="source/jquery.mb.miniAudioPlayer-master/dist/jquery.mb.miniAudioPlayer.min.js"></script>
+    <script>
+        	$(window).load(function() {
+		$(".preloader").fadeOut("slow");;
+	});   
+    </script>
     <script>
          $(document).ready(function() {
   $('#line1').delay(2000).animate({width:'47vw'},2000);
