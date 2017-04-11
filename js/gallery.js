@@ -2,7 +2,7 @@ $(document).ready(function(){
 var timer;
 $("#p1").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper,#straight").animate({ backgroundColor:'#F2DB56'},600);
+    timer = setTimeout(function(){       $(".wrapper,#leftbar").animate({ backgroundColor:'#F2DB56'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -11,7 +11,7 @@ $("#p1").mouseenter(function() {
 
 $("#p2").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper,#straight").animate({ backgroundColor:'#35696A'},600);
+    timer = setTimeout(function(){       $(".wrapper,#leftbar").animate({ backgroundColor:'#35696A'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -20,7 +20,7 @@ $("#p2").mouseenter(function() {
   
 $("#p3").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper,#straight").animate({ backgroundColor:'#33a6b8'},600);
+    timer = setTimeout(function(){       $(".wrapper,#leftbar").animate({ backgroundColor:'#33a6b8'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -28,7 +28,7 @@ $("#p3").mouseenter(function() {
   
 $("#p4").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper,#straight").animate({ backgroundColor:'#006284'},600);
+    timer = setTimeout(function(){       $(".wrapper,#leftbar").animate({ backgroundColor:'#006284'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -37,7 +37,7 @@ $("#p4").mouseenter(function() {
   
 $("#p5").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper,#straight").animate({ backgroundColor:'#0f2540'},600);
+    timer = setTimeout(function(){       $(".wrapper,#leftbar").animate({ backgroundColor:'#0f2540'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -46,7 +46,7 @@ $("#p5").mouseenter(function() {
   
 $("#p6").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper,#straight").animate({ backgroundColor:'#DA903D'},600);
+    timer = setTimeout(function(){       $(".wrapper,#leftbar").animate({ backgroundColor:'#DA903D'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -55,7 +55,7 @@ $("#p6").mouseenter(function() {
 
 $("#p7").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper,#straight").animate({ backgroundColor:'#789D40'},600);
+    timer = setTimeout(function(){       $(".wrapper,#leftbar").animate({ backgroundColor:'#789D40'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -64,7 +64,7 @@ $("#p7").mouseenter(function() {
   
 $("#p8").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper,#straight").animate({ backgroundColor:'#D5C2B9'},600);
+    timer = setTimeout(function(){       $(".wrapper,#leftbar").animate({ backgroundColor:'#D5C2B9'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -72,7 +72,7 @@ $("#p8").mouseenter(function() {
   
 $("#p9").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper,#straight").animate({ backgroundColor:'#5BA57D'},600);
+    timer = setTimeout(function(){       $(".wrapper,#leftbar").animate({ backgroundColor:'#5BA57D'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -81,7 +81,7 @@ $("#p9").mouseenter(function() {
   
 $("#p10").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper,#straight").animate({ backgroundColor:'#B1C59D'},600);
+    timer = setTimeout(function(){       $(".wrapper,#leftbar").animate({ backgroundColor:'#B1C59D'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -89,7 +89,7 @@ $("#p10").mouseenter(function() {
   
 $("#p11").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper,#straight").animate({ backgroundColor:'#7E8D7A'},600);
+    timer = setTimeout(function(){       $(".wrapper,#leftbar").animate({ backgroundColor:'#7E8D7A'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -98,7 +98,7 @@ $("#p11").mouseenter(function() {
   
 $("#p12").mouseenter(function() {
     var that = this;
-    timer = setTimeout(function(){       $(".wrapper, #straight").animate({ backgroundColor:'#C99733'},600);
+    timer = setTimeout(function(){       $(".wrapper, #leftbar").animate({ backgroundColor:'#C99733'},600);
     }, 1000);
 }).mouseleave(function() {
     clearTimeout(timer);
@@ -329,8 +329,8 @@ $('#text-l01,#text-l02,#text-l03,#text-l04').fadeIn();
 //hover2
 
 $(document).ready(function(){
-var iconElement = document.getElementById('icon');
-var hamburger = $('#icon');
+var iconElement = document.getElementById('menuicon');
+var hamburger = $('#menuicon');
 var htoggle = false;
 var options = {
     from: 'fa-bars',
@@ -350,21 +350,21 @@ hamburger.click(function () {
 function hamburger_cross(){
 if(htoggle==true){
   iconate(iconElement, options2);
-  $('#text2').fadeOut();
+  $('#menuclose').delay(100).fadeOut();
   $('#menu_left').animate({left:'-215px'});
   $('#overlay').hide();
-  $('#icon').animate({top:'398px'},200);
-  $('#straight_a').animate({top:'450px'},700);
-  $('#text1').fadeIn(2000);
+  $('#menuicon').animate({top:'50vh'},200);
+  $('#leftbar_line').delay(100).animate({height:'44vh'},700);
+  $('#menuopen').delay(100).fadeIn(1000);
   htoggle=false;
 }else{
-  $('#text1').fadeOut(10);
+  $('#menuopen').fadeOut(100);
   $('#menu_left').animate({left:'10px'});
   $('#overlay').show();
-  $('#icon').animate({top:'750px'},200);
-  $('#straight_a').animate({top:'850px'},500);
+  $('#menuicon').animate({top:'94vh'},200);
+  $('#leftbar_line').animate({height:'0vh'},500);
   iconate(iconElement, options);
-  $('#text2').fadeIn(1500);
+  $('#menuclose').delay(100).fadeIn(1000);
   htoggle=true;
 }    
 }    

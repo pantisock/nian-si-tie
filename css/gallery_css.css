@@ -37,11 +37,16 @@ ul {
   background-color:#C6C3B3;
 }
 
-/*菜單*/
-.menu{
-  position:absolute;
+.header{
+    position: fixed;
+    z-index: 99;
+    margin: 0;
+    padding: 0;
 }
-#menu_straight{
+
+
+/*菜單*/
+#menu_leftbar{
   position:absolute;
   z-index:40;
 }
@@ -69,22 +74,24 @@ ul {
   transition:0.5s ease;
 }
 
-#straight{
+#leftbar{
   width:50px;
   height:100vh;
   background-color:#C6C3B3;
 }
 
-#straight_a{
-  height:350px;
+#leftbar_line{
+  position: absolute;
+  z-index: 500;
+  height:44vh;
   width:2px;
   left:22px;
-  top:450px;
+  bottom: 0;
   background-color:#fff;
 }
 
 #overlay{
-  position:absolute;
+  position:fixed;
   z-index:20;
   width:100vw;
   height:100vh;
@@ -101,45 +108,43 @@ ul {
   z-index:10;
 }
 
-.picture.ptext{
-  z-index:3;
-  font-family:'tea';
-  font-size:25px;
-  position:absolute;
-  color:#fff;
-}
+
 
 .se{
   font-family:'tea';
   color:#fff;
 }
 
-#text1{
+#menuopen{
   font-size:5px;
   left:10px;
-  top:430px;
+  top:54vh;
 }
 
-#text2{
+#menuclose{
   display:none;
   font-size:5px;
   left:11px;
-  top:785px;
+  top:98vh;
 }
 
 
 /*漢堡包和icon的設定*/
-#icon{
+
+
+
+
+#menuicon{
   z-index:40;
   position:fixed;
-  top:398px;
+  top:50vh;
   left:10px;
   color:#fff;
   font-size:35px;
   transition:0.5s ease;
 }
 
-#icon:hover{
+#menuicon:hover{
   opacity:0.5;
   transform:scale(1.1,1.1);
 }
@@ -151,17 +156,26 @@ color:#fff;
 }
 
 #icona{
-  top:5px;
-  left:1300px;
+    position: fixed;
+    font-size: 23px;
+    color:#fff;
+    top:20px;
+    left: 97vw;
 }
 
 #iconb{
-  top:5px;
-  left:1350px;
+    position: fixed;
+    font-size: 23px;
+    color:#fff;
+    top:20px;
+    left: 94vw;
 }
 #iconc{
-  top:5px;
-  left:1395px;
+    position: fixed;
+    font-size: 23px;
+    color:#fff;
+    top:20px;
+    left: 91vw;
 }
 
 
@@ -169,23 +183,23 @@ color:#fff;
 /*裝飾邊欄*/
 #gallery-deco{
   position:absolute;
-  width:100vw;
+  right: 0;
+  width:70vw;
   height:100vh;
 }
 .w-lines{
   position:absolute;
   z-index:6;
   right:30px;
-  top:78px;
+  top:10%;
   width:70vw;
-  height:1px;
+  height:2px;
   background-color:#fff;
 }
 
 .h-lines{
   position:absolute;
   z-index:6;
-  left:760px;
   bottom:0;
   width:2px;
   height:95vh;
@@ -193,28 +207,34 @@ color:#fff;
 }
 
 #line2{
-  top:298px;
+  top:37%;
 }
 
 #line3{
-  top:518px;
+  top:64%;
 }
 
 #line4{
-  top:737px;
+  top:92%;
 }
 
 #line5{
   position:absolute;
   z-index:6;
-  left:430px;
+  left:0;
   bottom:0;
   width:2px;
   height:100vh;
   background-color:#fff;
 }
+
+#line6{
+  left: 32.3%;
+}
+
+
 #line7{
-  left:1091px;
+  left:64.6%;
 }
 
 
@@ -226,32 +246,53 @@ color:#fff;
   height:90vh;
   width:70vw;
   overflow: hidden;
+  padding-right: -200px;
 }
+
+
+
 .picture{
   cursor: url("http://tholman.com/intense-images/img/plus_cursor.png") 25 25, auto;
-  position:absolute;
-  height:219px;
-  width:329px;
+  float: left;
+  padding-bottom:22.5%;
+  height:0;
+  width:33.3%;
 }
-.picture.pmain{
+
+
+.pmain{
+  position: absolute;
   z-index:5;
   opacity:0;
   background-size: cover;
   background-position: 50% 50%;
   transition:1s ease;
+    
 }
 
-.picture.pmain:hover{
+.pmain:hover{
   opacity:1;
   animation: 1s blur forwards;
 }
 
 .p-overlay{
+  position: absolute;
   background-color:#767676;
   opacity:0.5;
   z-index:2;
 }
 
+.ptext{
+  position: absolute;
+  z-index:3;
+  font-family:'tea';
+  font-size:25px;
+  color:#fff;
+}
+
+.punder{
+    position: absolute;
+}
 
 .picture-scroll{
   width:70vw;
@@ -263,193 +304,183 @@ color:#fff;
 
 
 #p1-js{
-  background-image: url("https://dl.getdropbox.com/s/q9a113dcfrjh8du/picture1.png");
+  background-image: url(element/picture/gallery/picture1.png);
+  
 }
 
 #p1-under{
-  z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/q9a113dcfrjh8du/picture1.png");
-  filter: blur(3px)
+  background-image: url(element/picture/gallery/picture1.png);
+  filter: blur(3px);
 }
 #p2{
-  left:331px;
+
 }
 #p2-js{
-  background-image: url("https://dl.getdropbox.com/s/ccw04unc952s5as/picutre4.png");
+  background-image: url(element/picture/gallery/picutre4.png);
 }
 
 #p2-under{
   z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/ccw04unc952s5as/picutre4.png");
-  filter: blur(3px)
+  background-image: url(element/picture/gallery/picutre4.png);
+  filter: blur(3px);
 }
 
 #p3{
-  left:662px;
+
 }
 
 #p3-js{
-  background-image: url("https://dl.getdropbox.com/s/1yb9c96vz7pzlpr/picture3.png");
+  background-image: url(element/picture/gallery/picture3.png);
 }
 
 #p3-under{
   z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/1yb9c96vz7pzlpr/picture3.png");
-  filter: blur(3px)
+  background-image: url(element/picture/gallery/picture3.png);
+  filter: blur(3px);
 }
 
 #p4{
-  top:221px;
+
 }
 #p4-js{
-  background-image: url("https://dl.getdropbox.com/s/4h12rpuq0tokknd/picture2.png");
+  background-image: url(element/picture/gallery/picture2.png);
 }
 
 #p4-under{
   z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/4h12rpuq0tokknd/picture2.png");
+  background-image: url(element/picture/gallery/picture2.png);
   filter: blur(3px)
 }
 
 #p5{
-  top:221px;
-  left:331px;
 }
 #p5-js{
-  background-image: url("https://dl.getdropbox.com/s/73vjlp64v1i2dil/picture5.png");
+  background-image: url(element/picture/gallery/picture5.png);
 }
 
 #p5-under{
   z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/73vjlp64v1i2dil/picture5.png");
+  background-image: url(element/picture/gallery/picture5.png);
   filter: blur(3px)
 }
 
 #p6{
-  left:662px;
-  top:221px;
 }
 
 #p6-js{
-  background-image: url("https://dl.getdropbox.com/s/q7703d9zxzqpenp/picture6.png");
+  background-image: url(element/picture/gallery/picture6.png);
 }
 
 #p6-under{
   z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/q7703d9zxzqpenp/picture6.png");
+  background-image: url(element/picture/gallery/picture6.png);
   filter: blur(3px)
 }
 
 #p7{
-  top:442px;
 }
 
 #p7-js{
-  background-image: url("https://dl.getdropbox.com/s/hqnm4ujpv58797z/picture7.png");
+  background-image: url(element/picture/gallery/picture7.png);
 }
 
 #p7-under{
   z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/hqnm4ujpv58797z/picture7.png");
+  background-image: url(element/picture/gallery/picture7.png);
   filter: blur(3px)
 }
 #p8{
-  left:331px;
-  top:442px;
+
 }
 #p8-js{
-  background-image: url("https://dl.getdropbox.com/s/5mqvzp0ihlkjclk/picture8.png");
+  background-image: url(element/picture/gallery/picture8.png);
 }
 
 #p8-under{
   z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/5mqvzp0ihlkjclk/picture8.png");
+  background-image: url(element/picture/gallery/picture8.png);
   filter: blur(3px)
 }
 
 #p9{
-    left:662px;
-    top:442px;
+
 }
 
 #p9-js{
-  background-image: url("https://dl.getdropbox.com/s/6etazkpg69sxw3b/picture9.png");
+  background-image: url(element/picture/gallery/picture9.png);
 }
 
 #p9-under{
   z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/6etazkpg69sxw3b/picture9.png");
+  background-image: url(element/picture/gallery/picture9.png);
   filter: blur(3px)
 }
 
 #p10{
-    top:663px;
+
 }
       
       
 
 #p10-js{
-  background-image: url("https://dl.getdropbox.com/s/fe6t0amc07jvki5/picture10.png");
+  background-image: url(element/picture/gallery/picture10.png);
 }
 
 #p10-under{
   z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/fe6t0amc07jvki5/picture10.png");
+  background-image: url(element/picture/gallery/picture10.png);
   filter: blur(3px)
 }
 #p11{
-    top:663px;
-    left:331px;
+
 }
       
       
 
 #p11-js{
-  background-image: url("https://dl.getdropbox.com/s/2zr29edcn6bw4cm/picutre11.png");
+  background-image: url(element/picture/gallery/picutre11.png);
 }
 
 #p11-under{
   z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/2zr29edcn6bw4cm/picutre11.png");
+  background-image: url(element/picture/gallery/picutre11.png);
   filter: blur(3px)
 }
 
 #p12{
-    top:663px;
-    left:662px;
 }
       
 #p12-js{
-  background-image: url("https://dl.getdropbox.com/s/4pn1n06jaahc24p/picture12.png");
+  background-image: url(element/picture/gallery/picture12.png);
 }
 
 #p12-under{
   z-index:1;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("https://dl.getdropbox.com/s/4pn1n06jaahc24p/picture12.png");
+  background-image: url(element/picture/gallery/picture12.png);
   filter: blur(3px)
 }
 
