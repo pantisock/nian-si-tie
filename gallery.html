@@ -1,18 +1,20 @@
 <html>
     <head>
     <meta charset="UTF-8" />
+    <title>廿四帖</title>
+    <link rel="icon" href="css/element/LOGO.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="css/gallery_css.css" />
     <link rel="stylesheet" type="text/css" href="source/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/iconate.min.css" />
     <link rel="stylesheet" type="text/css" href="css/scrollbar.css" />
-    <link rel="stylesheet" type="text/css" href="css/gallery_framer.css" />
+    <script src="js/afterglow.min.js"></script>
                 
     </head>
     
     <body>
 
 <!----preloader---->        
-        <div class="preloader">
+<div class="preloader">
 <div class='tetrominos'>
   <div class='tetromino box1'></div>
   <div class='tetromino box2'></div>
@@ -300,10 +302,7 @@
 </div>
     </div> 
   <div id="gallery">
-     <a href="https://vimeo.com/198941329"
-      class="framer"
-      data-framer-width="1280"
-      data-framer-height="720">
+     <a class="afterglow" href="#video1">
         <div class="picture" id="p1">
           <div class="picture pmain" id="p1-js"></div>
           <div class="picture ptext">
@@ -313,10 +312,7 @@
           <div class="picture punder" id="p1-under"></div>
         </div>
       </a>
-   <a href="https://vimeo.com/198941034"
-   class="framer"
-   data-framer-width="1280"
-   data-framer-height="720"><div class="picture" id="p2">
+     <a class="afterglow" href="#video2"><div class="picture" id="p2">
       <div class="picture pmain" id="p2-js">
         </div>
       <div class="picture ptext">
@@ -327,11 +323,7 @@
       <div class="picture punder" id="p2-under">
         </div>
       </div></a>
-    
-       <a href="https://vimeo.com/198941139"
-   class="framer"
-   data-framer-width="1280"
-   data-framer-height="720"><div class="picture" id="p3">
+     <a class="afterglow" href="#video3"><div class="picture" id="p3">
       <div class="picture pmain" id="p3-js">
         </div>
       <div class="picture ptext">
@@ -342,10 +334,7 @@
       <div class="picture punder" id="p3-under">
         </div>
       </div></a>
-       <a href="https://vimeo.com/199543680"
-   class="framer"
-   data-framer-width="1280"
-   data-framer-height="720"><div class="picture" id="p4">
+     <a class="afterglow" href="#video4"><div class="picture" id="p4">
       <div class="picture pmain" id="p4-js">
         </div>
       <div class="picture ptext">
@@ -356,10 +345,7 @@
       <div class="picture punder" id="p4-under">
         </div>
       </div></a>
-       <a href="https://vimeo.com/198940924"
-   class="framer"
-   data-framer-width="1280"
-   data-framer-height="720"><div class="picture" id="p5">
+     <a class="afterglow" href="#video5"><div class="picture" id="p5">
       <div class="picture pmain" id="p5-js">
         </div>
       <div class="picture ptext">
@@ -450,6 +436,24 @@
     <div class="picture-scroll"></div>
     
     </div>
+  <div id="gallery_video">
+    <video id="video1" width="960" height="540" >
+      <source type="video/mp4" src="css/element/video/dashu.mp4" />
+    </video>
+    <video id="video2" width="960" height="540" >
+      <source type="video/mp4" src="css/element/video/bailu.mp4" />
+    </video>
+    <video id="video3" width="960" height="540" >
+      <source type="video/mp4" src="css/element/video/sonjon.mp4" />
+    </video>
+    <video id="video4" width="960" height="540" >
+      <source type="video/mp4" src="css/element/video/lidon.mp4" />
+    </video>
+    <video id="video5" width="960" height="540" >
+      <source type="video/mp4" src="css/element/video/donji.mp4" />
+    </video>
+    
+    </div>
 <!----菜單---->
     <div id="menu_side">
      <div id="menu_left">
@@ -476,13 +480,12 @@
     <div id="overlay"></div>
 </div>        
         
-        
-        
+
+<!----jquery---->   
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/jquery.Framer.min.js"></script>
     <script src="js/iconate.min.js"></script>
     <script src="js/playsound.js"></script>
         <script>
@@ -501,24 +504,6 @@ snapAmount:240,
 snapOffset:20
 });
 //scrollbar
-        $('.framer').Framer({
-		opacity: 0.8,
-		overlayTime: 500,
-		isOverlayClose: true,
-		isAutoResize: true,
-		isScroll: true,
-		resizeRatio: 0.9,
-		speed: 500,
-		title: '<div id="edTitle"></div>',
-		description: '<div id="edDescription"></div>',
-		closeBtn: '<div class="close_btn"></div>',
-		inner: $('<div id="Framer_inner"></div>'),
-		width: 1280,
-		height: 720,
-		iframe: '<iframe name="framer-iframe" frameborder="0"></iframe>',
-		ajaxDataType: 'html',
-	});
-//framer
         </script>
     </body>
         </html>
