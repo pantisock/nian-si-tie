@@ -10,18 +10,15 @@
     
     <body>
 
-        
-<!----preloader---->        
+ <!----preloader---->        
 <div class="preloader">
-<div class='tetrominos'>
-  <div class='tetromino box1'></div>
-  <div class='tetromino box2'></div>
-  <div class='tetromino box3'></div>
-  <div class='tetromino box4'></div>
-</div>
-<div class="loader"><span class="loader_letter">L</span><span class="loader_letter">o</span><span class="loader_letter">a</span><span class="loader_letter">d</span><span class="loader_letter">i</span><span class="loader_letter">n</span><span class="loader_letter">g</span></div>
+   <div class="loader">
+  <div></div>
+  <div></div>
+  <div></div>
+  </div>
 <div class="background"></div>
-    </div>     
+    </div>    
 <!----上層區塊〠_〠---->
 <div class="header">
 <i class="fa fa-facebook-square" id="icona"></i>
@@ -35,9 +32,9 @@
 <!----主頁按鈕＆動畫&網點〠_〠---->
 <div class="main_page">
     <div class="main_button">
-        <div class="m_bts hvr-shrink" id="mbts1">關於廿四帖</div>
-        <div class="m_bts hvr-shrink" id="mbts2"><a href="gallery.html">作品</a></div>
-        <div class="m_bts hvr-shrink" id="mbts3">聯繫</div>
+        <a href="about.html"><div class="m_bts hvr-shrink" id="mbts1">關於廿四帖</div></a>
+        <a href="gallery.html"><div class="m_bts hvr-shrink" id="mbts2">作品</div></a>
+        <a href="contact.html"><div class="m_bts hvr-shrink" id="mbts3">聯繫</div></a>
    </div>
     <div class="main_animate">
     <div class="logo"></div>
@@ -157,7 +154,8 @@
     <script src="source/jquery.mb.miniAudioPlayer-master/dist/jquery.mb.miniAudioPlayer.min.js"></script>
     <script>
         	$(window).load(function() {
-		$(".preloader").fadeOut("2000");;
+		$(".loader").delay(2000).fadeOut(1000);
+        $(".background").delay(2500).fadeOut(1500);
 	});   
     </script>
     <script>

@@ -15,13 +15,11 @@
 
 <!----preloader---->        
 <div class="preloader">
-<div class='tetrominos'>
-  <div class='tetromino box1'></div>
-  <div class='tetromino box2'></div>
-  <div class='tetromino box3'></div>
-  <div class='tetromino box4'></div>
-</div>
-<div class="loader"><span class="loader_letter">L</span><span class="loader_letter">o</span><span class="loader_letter">a</span><span class="loader_letter">d</span><span class="loader_letter">i</span><span class="loader_letter">n</span><span class="loader_letter">g</span></div>
+   <div class="loader">
+  <div></div>
+  <div></div>
+  <div></div>
+  </div>
 <div class="background"></div>
     </div>
         
@@ -33,6 +31,7 @@
         </div>         
 
 <div class="wrapper">
+<!----音效---->
   <div class="mp3s">
 <audio id="audio" src="css/element/audio/menuse.mp3" preload></audio>
 <audio id="audio1" src="css/element/audio/se1.mp3" preload></audio>
@@ -460,11 +459,10 @@
          <ul>
 　<a href="toppage.html"><li class="se hvr-bounce-to-right"><span style="font-size:20px;">HOME</span><br><span style="padding-left:22px;">首頁</span></li></a>
              
-　<li class="se hvr-bounce-to-right"><span style="font-size:20px;">ABOUT</span><br><span style="padding-left:29px;">關於</span><br><span style="padding-left:14px;">廿四帖</span></li>
+　<a href="about.html"><li class="se hvr-bounce-to-right"><span style="font-size:20px;">ABOUT</span><br><span style="padding-left:29px;">關於</span><br><span style="padding-left:14px;">廿四帖</span></li></a>
              
-　<li class="se hvr-bounce-to-right"><span style="font-size:20px;">WORK</span><br><span style="padding-left:25px;">作品</span></li>
-             
-　<li class="se hvr-bounce-to-right"><span style="font-size:20px;">CONTACT</span><br><span style="padding-left:22px;">參與人員</span><br><span style="padding-left:70px;">與</span><br><span style="padding-left:55px;">聯繫</span></li>
+　<a href="gallery.html"><li class="se hvr-bounce-to-right"><span style="font-size:20px;">WORK</span><br><span style="padding-left:25px;">作品</span></li></a>
+　<a href="contact.html"><li class="se hvr-bounce-to-right"><span style="font-size:20px;">CONTACT</span><br><span style="padding-left:22px;">參與人員</span><br><span style="padding-left:70px;">與</span><br><span style="padding-left:55px;">聯繫</span></li></a>
           </ul>
       </div>
      <div id="menu_leftbar">
@@ -490,7 +488,8 @@
     <script src="js/playsound.js"></script>
         <script>
         	$(window).load(function() {
-		$(".preloader").fadeOut(2000);;
+		$(".loader").fadeOut(1000);
+        $(".background").delay(1000).fadeOut(1000);
 	});   
         </script>
         <script>
