@@ -189,6 +189,7 @@ color:#fff;
 #gallery-deco{
   position:absolute;
   right: 0;
+  bottom: 0;
   width:70vw;
   height:100vh;
 }
@@ -216,11 +217,11 @@ color:#fff;
 }
 
 #line3{
-  top:64%;
+  top:63%;
 }
 
 #line4{
-  top:92%;
+  top:90%;
 }
 
 #line5{

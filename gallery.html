@@ -355,7 +355,7 @@
       <div class="picture punder" id="p5-under">
         </div>
       </div></a>
-    <div class="picture" id="p6" data-image="https://dl.getdropbox.com/s/q7703d9zxzqpenp/picture6.png">
+    <div class="picture" id="p6" data-image="css/element/picture/gallery/picture6.png">
       <div class="picture pmain" id="p6-js">
         </div>
       <div class="picture ptext">
@@ -486,6 +486,7 @@
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/iconate.min.js"></script>
     <script src="js/playsound.js"></script>
+        <script src="js/intense.min.js"></script>
         <script>
         	$(window).load(function() {
 		$(".loader").fadeOut(1000);
@@ -497,12 +498,18 @@
   theme:"inset-3",
   scrollButtons:{enable:true,scrollType:"stepped"},
 keyboard:{scrollType:"stepped"},
-mouseWheel:{scrollAmount:188,normalizeDelta:true},
+mouseWheel:{scrollAmount:5,normalizeDelta:true},
  autoExpandScrollbar:true,
 snapAmount:240,
-snapOffset:20
+snapOffset:23
 });
 //scrollbar
+        </script>
+        <script>
+    window.onload = function() {
+    var elements = document.querySelectorAll( '.picture' );
+    Intense( elements );
+ }
         </script>
     </body>
         </html>
